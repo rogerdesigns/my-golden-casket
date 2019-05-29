@@ -1,0 +1,36 @@
+  <div class="top">
+    <winning-numbers 
+      class="winNumber"
+      [primaryNumbers]="winningNumbers?.primaryNumbers" 
+      [secondaryNumbers]="winningNumbers?.secondaryNumbers">
+    </winning-numbers>
+    <div class="myBtn-wrap" >
+        <div class="myBtn fill" (click)="onClickFill()">
+            <i class="material-icons">
+                flash_on
+            </i>
+        </div>
+        <div class="myBtn delete" (click)="onClickReset()">
+            <i class="material-icons">
+                delete_forever
+            </i>
+        </div>
+    </div>
+  </div>
+    <number-grid 
+      numberEnd="35" 
+      [winningNumbers]="winningNumbers?.primaryNumbers" 
+      [showWinningNumbers]="showWinningNumbers">
+    </number-grid>
+    <div class="select-your-powerball">
+      SELECT YOUR POWERBALL
+    </div>
+    <number-grid 
+      numberEnd="20" 
+      [winningNumbers]="winningNumbers?.secondaryNumbers" 
+      [showWinningNumbers]="showWinningNumbers">
+    </number-grid>
+
+
+
+
