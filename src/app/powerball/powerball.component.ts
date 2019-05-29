@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { DataService, WinningNumbers } from '../data.service';
 
 @Component({
@@ -7,13 +7,20 @@ import { DataService, WinningNumbers } from '../data.service';
   templateUrl: './powerball.component.html',
   styleUrls: ['./powerball.component.less']
 })
-export class PowerballComponent implements OnInit {
+export class PowerballComponent implements OnInit, OnDestroy {
   
+  public subscriptions: Array<Subscription> = [];
   public winningNumbers: WinningNumbers;
   public showWinningNumbers: boolean;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(){
+    this.subscriptions.forEach(sub => {
+      sub.unsubscribe();
+    })
   }
 
   onClickFill() {
@@ -23,10 +30,12 @@ export class PowerballComponent implements OnInit {
       OptionalProductFilter: ["Powerball"]
     }
 
-    this.dataService.getWinningNumbers(param).subscribe((result: WinningNumbers) => {
-      this.winningNumbers = result;
-      this.showWinningNumbers = true;
-    },(err: any) => console.log(err))
+    this.subscriptions.push(
+      this.dataService.getWinningNumbers(param).subscribe((result: WinningNumbers) => {
+        this.winningNumbers = result;
+        this.showWinningNumbers = true;
+      },(err: any) => console.log(err))
+    ) 
   }
 
   onClickReset(){
