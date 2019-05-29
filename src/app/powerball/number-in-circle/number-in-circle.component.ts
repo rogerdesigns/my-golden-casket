@@ -7,7 +7,7 @@ import { Component, HostBinding, OnChanges, Input, OnInit } from '@angular/core'
 })
 export class NumberInCircleComponent implements OnChanges {
 
-  @HostBinding('style.background') numberBackground: string = '#FFFFFF';
+  @HostBinding('style.background') numberBackground: string = 'none';
 
   @Input() number: number = 0;
   @Input() numberBg: string = '#3450a7';
