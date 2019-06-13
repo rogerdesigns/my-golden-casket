@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NumberInSquareComponent implements OnInit {
 
-  @Input('number') public displayNumber: number = 0;
+  @Input() public number = 0;
 
   constructor() { }
 

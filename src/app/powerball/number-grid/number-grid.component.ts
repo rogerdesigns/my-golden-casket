@@ -7,18 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NumberGridComponent implements OnInit {
 
-  @Input() public numberStart: number = 1;
-  @Input() public numberEnd: number = 35;
+  @Input() public numberStart = 1;
+  @Input() public numberEnd = 35;
   @Input() public winningNumbers: Array<number>;
-  @Input() public showWinningNumbers: boolean = false;
+  @Input() public showWinningNumbers = false;
 
   public numbers: Array<number>;
 
   constructor() { }
 
-  private numbersGen(numberStart, numberEnd): Array<number>{
-    let retVal = [];
-    for(let i = numberStart; i <= numberEnd; i++){
+  private numbersGen(numberStart, numberEnd): Array<number> {
+    const retVal: Array<number> = [];
+    for (let i = numberStart; i <= numberEnd; i++) {
       retVal.push(i);
     }
     return retVal;

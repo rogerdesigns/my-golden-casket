@@ -2,13 +2,16 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { DataService, WinningNumbers } from '../data.service';
 
+const goldenCasket = 'GoldenCasket';
+const powerball = 'Powerball';
+
 @Component({
   selector: 'powerball',
   templateUrl: './powerball.component.html',
   styleUrls: ['./powerball.component.less']
 })
 export class PowerballComponent implements OnInit, OnDestroy {
-  
+
   public subscriptions: Array<Subscription> = [];
   public winningNumbers: WinningNumbers;
   public showWinningNumbers: boolean;
@@ -17,28 +20,28 @@ export class PowerballComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subscriptions.forEach(sub => {
       sub.unsubscribe();
-    })
+    });
   }
 
   onClickFill() {
     const param = {
-      CompanyId: "GoldenCasket",
+      CompanyId: goldenCasket,
       MaxDrawCountPerProduct: 1,
-      OptionalProductFilter: ["Powerball"]
-    }
+      OptionalProductFilter: [powerball]
+    };
 
     this.subscriptions.push(
       this.dataService.getWinningNumbers(param).subscribe((result: WinningNumbers) => {
         this.winningNumbers = result;
         this.showWinningNumbers = true;
-      },(err: any) => console.log(err))
-    ) 
+      }, (err: any) => console.log(err))
+    );
   }
 
-  onClickReset(){
+  onClickReset() {
     this.winningNumbers = undefined;
     this.showWinningNumbers = false;
   }
