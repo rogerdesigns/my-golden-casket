@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'winning-numbers',
+  selector: 'app-winning-numbers',
   templateUrl: './winning-numbers.component.html',
   styleUrls: ['./winning-numbers.component.less']
 })

@@ -1,16 +1,16 @@
 <div class="ball-wrap">
-  <number-in-circle
+  <app-number-in-circle
     class="ball"
     *ngFor="let n of primaryNumbers || primaryPlaceHolder" 
     [number]="n">
-  </number-in-circle>
+  </app-number-in-circle>
 </div>
 
 <div class="powerball-wrap">
-  <number-in-circle 
+  <app-number-in-circle 
     class="powerball"
     *ngFor="let n of secondaryNumbers || secondaryPlaceHolder" 
     [number]="n" 
     numberBg="#889bab">
-  </number-in-circle>
+  </app-number-in-circle>
 </div>

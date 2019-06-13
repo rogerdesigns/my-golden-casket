@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'number-grid',
+  selector: 'app-number-grid',
   templateUrl: './number-grid.component.html',
   styleUrls: ['./number-grid.component.less']
 })

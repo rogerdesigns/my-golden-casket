@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnChanges, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'number-in-circle',
+  selector: 'app-number-in-circle',
   templateUrl: './number-in-circle.component.html',
   styleUrls: ['./number-in-circle.component.less']
 })

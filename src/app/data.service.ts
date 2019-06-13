@@ -19,11 +19,13 @@ export class DataService {
 
   getWinningNumbers(param): Observable<WinningNumbers> {
     return this.http.post<any>(url, param).pipe(
-      map((result) => <WinningNumbers>{
-        primaryNumbers: result.DrawResults[0].PrimaryNumbers.sort((a, b) => a - b),
-        secondaryNumbers: result.DrawResults[0].SecondaryNumbers
+      map((result): WinningNumbers => {
+        return {
+          primaryNumbers: result.DrawResults[0].PrimaryNumbers.sort((a, b) => a - b),
+          secondaryNumbers: result.DrawResults[0].SecondaryNumbers
+        };
       })
-    )
+    );
   }
 
 

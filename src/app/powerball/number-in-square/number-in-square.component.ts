@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'number-in-square',
+  selector: 'app-number-in-square',
   templateUrl: './number-in-square.component.html',
   styleUrls: ['./number-in-square.component.less']
 })

@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { DataService, WinningNumbers } from '../data.service';
 
 const goldenCasket = 'GoldenCasket';
 const powerball = 'Powerball';
 
 @Component({
-  selector: 'powerball',
+  selector: 'app-powerball',
   templateUrl: './powerball.component.html',
   styleUrls: ['./powerball.component.less']
 })
