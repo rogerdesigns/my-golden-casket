@@ -10,6 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 1. Clone repo
 2. run `npm install`
+3. run `ng build number-in-square`. To build number-in-square library first
 3. run `npm start`
 4. open browser and navigate to `http://localhost:4200/`
 

@@ -135,6 +135,41 @@
           }
         }
       }
+    },
+    "number-in-square": {
+      "root": "projects/number-in-square",
+      "sourceRoot": "projects/number-in-square/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/number-in-square/tsconfig.lib.json",
+            "project": "projects/number-in-square/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/number-in-square/src/test.ts",
+            "tsConfig": "projects/number-in-square/tsconfig.spec.json",
+            "karmaConfig": "projects/number-in-square/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/number-in-square/tsconfig.lib.json",
+              "projects/number-in-square/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "GoldenCasket"

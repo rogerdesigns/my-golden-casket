@@ -1,16 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-number-in-square',
+  selector: 'lib-number-in-square',
   templateUrl: './number-in-square.component.html',
-  styleUrls: ['./number-in-square.component.less']
+  styleUrls: ['./number-in-square.component.css']
 })
 export class NumberInSquareComponent implements OnInit {
-
   @Input() public number = 0;
-
   constructor() { }
-
   ngOnInit() {
   }
 

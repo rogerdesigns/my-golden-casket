@@ -1,0 +1,13 @@
+:host{
+    display: flex;
+    height: 100%;
+    color: #8563aa;
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+  }
+
+  :host(.active){
+    background: url('c.gif') center center no-repeat, #e9e4f1;
+}

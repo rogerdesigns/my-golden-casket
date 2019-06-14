@@ -2,7 +2,7 @@
 <div class="wrapper">
     <ng-container *ngFor="let n of numbers"> 
       <div class="number-box">
-          <app-number-in-square [number]="n" [ngClass]="{active: winningNumbers?.indexOf(n) > -1 && showWinningNumbers}"></app-number-in-square>
+          <lib-number-in-square [number]="n" [ngClass]="{active: winningNumbers?.indexOf(n) > -1 && showWinningNumbers}"></lib-number-in-square>
       </div>
     </ng-container>
 </div>

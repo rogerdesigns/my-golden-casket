@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "number-in-square": [
+        "dist/number-in-square"
+      ],
+      "number-in-square/*": [
+        "dist/number-in-square/*"
+      ]
+    }
   }
 }
