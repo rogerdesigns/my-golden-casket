@@ -2,10 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## QuickStart
 
 1. Clone repo
@@ -13,6 +9,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 3. run `ng build number-in-square`. To build number-in-square library first
 3. run `npm start`
 4. open browser and navigate to `http://localhost:4200/`
+
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Build
 
